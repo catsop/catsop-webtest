@@ -1,0 +1,31 @@
+"""
+Custom Django settings for catsop project.
+"""
+
+from settings_base import *
+
+# SECURITY WARNING: keep the secret key used in production secret!
+# (You can generate a key with:
+# >>> from random import choice
+# >>> ''.join([choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)') for
+# i in range(50)])
+# '@er^vm3$w#9n$)z3avny*hh+l^#ezv+sx*(72qwp0c%%cg1$i+'
+# ... which is how "django-admin startproject" does it.)
+SECRET_KEY = ''
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+TEMPLATE_DEBUG = True
+
+ALLOWED_HOSTS = []
+
+# Database
+# https://docs.djangoproject.com/en/1.6/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
